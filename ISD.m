@@ -1,5 +1,5 @@
-function [P, Re, R] = IHSD(pmf_file, dc_file, z, kB, T)
-    % 'IHSD' calculates Permeability Coefficient 'P' using Inhomogeneous Solubility Diffusion Model by integrating Resistivities 'R' over the reaction coordinate 'z'. 
+function [P, Re, R] = ISD(pmf_file, dc_file, z, kB, T)
+    % 'ISD' calculates Permeability Coefficient 'P' using Inhomogeneous Solubility Diffusion Model by integrating Resistivities 'R' over the reaction coordinate 'z'. 
     % 5 input arguments in the following order
     %   1)  pmf_file:   CSV file with two columns, Reaction coordinate (in nm) in column 1, PMF (Potential of Mean Force) values (in kJ/mol) in column 2 
     %   2)  dc_file:    CSV file with two columns, Reaction coordinate (in nm) in column 1, DC (Diffusion Coefficient) values (in (nm^2)/ps) in column 2
@@ -13,7 +13,7 @@ function [P, Re, R] = IHSD(pmf_file, dc_file, z, kB, T)
     %   3)  R:          Resistivities (in ps/(nm^2))
     %
     % Example
-    % [P, R] = IHSD('PMF.csv', 'DC.csv', [-3.8:0.01:3.8], 0.008314463, 303.15);
+    % [P, R] = ISD('PMF.csv', 'DC.csv', [-3.8:0.01:3.8], 0.008314463, 303.15);
     pmf = readmatrix(pmf_file);                 
     dc = readmatrix(dc_file);                   
     PMF = interp1(pmf(:,1), pmf(:,2), z, 'linear');
