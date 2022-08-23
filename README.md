@@ -1,5 +1,8 @@
+The codes used in the study **Radhakrishnan, N., Kaul, S. C., Wadhwa, R., & Sundar, D. (2022). Phosphatidylserine Exposed Lipid Bilayer Models for Understanding Cancer Cell Selectivity of Natural Compounds: A Molecular Dynamics Simulation Study. Membranes, 12(1), 64** (https://doi.org/10.3390/membranes12010064).
+
+
 ### ISD
-This script is for calculating Permeability Coefficient (P) of a small molecule through a lipid bilayer from PMF and Diffusion Coefficients (DC) using Inhomogeneous Solubility Diffusion Model.
+This script is for calculating Permeability Coefficient (P) of a small molecule through a lipid bilayer from PMF and Diffusion Coefficients (DC) using the Inhomogeneous Solubility Diffusion Model of Marrink and Berendsen (https://doi.org/10.1021/j100066a040).
 'ISD' calculates Permeability Coefficient 'P' by integrating Resistivities 'R' over the reaction coordinate 'z'. 
 #### 5 input arguments in the following order
 1)  **pmf_file**:   CSV file with two columns, Reaction coordinate (in nm) in first column, PMF (Potential of Mean Force) values (in kJ/mol) in second column 
@@ -20,7 +23,7 @@ This script is for calculating Permeability Coefficient (P) of a small molecule 
 ### dc_from_xacf
 
 This function is for calculating position-dependent diffusion coeffcieints of small molecules through lipid bilayer after performing umbrella sampling MD simulations.
-Diffusion Coefficient (DC) is calculated from Position Autocorrelation Function (XACF) using the Generalized Langevin Method of Hummer (doi: 10.1088/1367-2630/7/1/034).
+Diffusion Coefficient (DC) is calculated from Position Autocorrelation Function (XACF) using the Generalized Langevin Method of Hummer (https://doi.org/10.1088/1367-2630/7/1/034).
 
 #### Two input arguments:
   1) **xacf_file**: Filename of calculated Autocorrelation functions for different umbrella sampling windows.
