@@ -1,6 +1,6 @@
 The codes used in the study **Radhakrishnan, N., Kaul, S. C., Wadhwa, R., & Sundar, D. (2022). Phosphatidylserine Exposed Lipid Bilayer Models for Understanding Cancer Cell Selectivity of Natural Compounds: A Molecular Dynamics Simulation Study. Membranes, 12(1), 64** (https://doi.org/10.3390/membranes12010064).
 
-
+---
 ### ISD
 This script is for calculating Permeability Coefficient (P) of a small molecule through a lipid bilayer from PMF and Diffusion Coefficients (DC) using the Inhomogeneous Solubility Diffusion Model of Marrink and Berendsen (https://doi.org/10.1021/j100066a040).
 'ISD' calculates Permeability Coefficient 'P' by integrating Resistivities 'R' over the reaction coordinate 'z'. 
